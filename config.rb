@@ -46,3 +46,9 @@ page '/*.txt', layout: false
 #   activate :minify_css
 #   activate :minify_javascript
 # end
+
+activate :external_pipeline,
+  name: :webpack,
+  command: build? ? './node_modules/webpack/bin/webpack.js --bail' : './node_modules/webpack/bin/webpack.js --watch --color',
+  source: ".tmp/dist",
+  latency: 1
