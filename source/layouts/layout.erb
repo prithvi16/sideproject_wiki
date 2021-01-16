@@ -9,6 +9,15 @@
     <title><%= current_page.data.title || "Middleman" %></title>
     <%= stylesheet_link_tag "styles" %>
     <%= javascript_include_tag "application" %>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DZSS1VK4Q2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DZSS1VK4Q2');
+</script>
   </head>
   <body>
     <%= yield %>
